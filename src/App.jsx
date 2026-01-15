@@ -2,20 +2,29 @@ import { useState } from 'react'
 import './App.css'
 import EasyQuiz from './components/EasyQuiz'
 import MediumQuiz from './components/MediumQuiz'
+import HardQuiz from './components/HardQuiz'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [easyQuiz, setEasyQuiz] = useState(false);
   const [mediumQuiz, setMediumQuiz] = useState(false);
+  const [hardQuiz, setHardQuiz] = useState(false);
 
   const displayEasyQuiz = () => {
     setEasyQuiz(true); 
     setMediumQuiz(false);
+    setHardQuiz(false);
   }
   
   const displayMediumQuiz = () => {
     setMediumQuiz(true);
     setEasyQuiz(false);
+    setHardQuiz(false);
+  }
+
+  const displayHardQuiz = () => {
+    setHardQuiz(true);
+    setEasyQuiz(false);
+    setMediumQuiz(false);
   }
 
   return (
@@ -24,11 +33,9 @@ function App() {
       <div className="card">
 
         <div className="button-row">
-            <button onClick={displayEasyQuiz}>Easy Quiz</button>
-            <button onClick={displayMediumQuiz}>Medium Quiz</button>
-            <button onClick={() => setCount((count) => count + 1)}>
-              count is {count}
-            </button>
+            <button onClick={displayEasyQuiz}>Easy</button>
+            <button onClick={displayMediumQuiz}>Medium</button>
+            <button onClick={displayHardQuiz}>Hard</button>
         </div>
         
         <div className="content">
@@ -38,6 +45,10 @@ function App() {
 
           <div className={mediumQuiz ? "display-block" : "display-none"}>
             <MediumQuiz />
+          </div>
+
+          <div className={hardQuiz ? "display-block" : "display-none"}>
+            <HardQuiz />
           </div>
         </div>
 

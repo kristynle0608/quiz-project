@@ -1,42 +1,42 @@
 import { useState } from 'react'
-import './EasyQuiz.css'
+import './HardQuiz.css'
 
-const question1Options = [
-    { id: 1, option: "2019", checked: false, correct: false },
-    { id: 2, option: "2020", checked: false, correct: true },
-    { id: 3, option: "2021", checked: false, correct: false },
-    { id: 4, option: "2022", checked: false, correct: false }
-]
-
-const question2Options = [
-        { id: 1, option: "First-person Shooter", checked: false, correct: true },
-        { id: 2, option: "Third-person Shooter", checked: false, correct: false },
-        { id: 3, option: "Top-Down/Isometric Shooter", checked: false, correct: false },
-        { id: 4, option: "Rail Shooter", checked: false, correct: false }
+const question1HardOptions = [
+        { id: 1, option: "Attackers", checked: false, correct: true },
+        { id: 2, option: "Defenders", checked: false, correct: false },
+        { id: 3, option: "Strikers", checked: false, correct: false },
+        { id: 4, option: "Protectors", checked: false, correct: false }
     ]
 
-    const question3Options = [
-        { id: 1, option: "Brimstone", checked: false, correct: false },
-        { id: 2, option: "Jett", checked: false, correct: false },
-        { id: 3, option: "Sova", checked: false, correct: false },
-        { id: 4, option: "Reyna", checked: false, correct: true }
+    const question2HardOptions = [
+        { id: 1, option: "Harbor", checked: false, correct: false },
+        { id: 2, option: "Veto", checked: false, correct: false },
+        { id: 3, option: "KAY/O", checked: false, correct: true },
+        { id: 4, option: "Chamber", checked: false, correct: false }
     ]
 
-    const question4Options = [
-        { id: 1, option: "3", checked: false, correct: false },
-        { id: 2, option: "4", checked: false, correct: false },
-        { id: 3, option: "5", checked: false, correct: true },
-        { id: 4, option: "6", checked: false, correct: false }
+    const question3HardOptions = [
+        { id: 1, option: "SMG", checked: false, correct: true },
+        { id: 2, option: "Shotgun", checked: false, correct: false },
+        { id: 3, option: "Rifle", checked: false, correct: false },
+        { id: 4, option: "Sniper Rifle", checked: false, correct: false }
     ]
 
-    const question5Options = [
-        { id: 1, option: "Rockstar Games", checked: false, correct: false },
-        { id: 2, option: "Riot Games", checked: false, correct: true },
-        { id: 3, option: "Valve", checked: false, correct: false },
-        { id: 4, option: "Epic Games", checked: false, correct: false }
+    const question4HardOptions = [
+        { id: 1, option: "Mosh Pit", checked: false, correct: false },
+        { id: 2, option: "Wingman", checked: false, correct: false },
+        { id: 3, option: "Dizzy", checked: false, correct: false },
+        { id: 4, option: "Thrash", checked: false, correct: true }
     ]
 
-function EasyQuiz() {
+    const question5HardOptions = [
+        { id: 1, option: "Syria", checked: false, correct: false },
+        { id: 2, option: "Morocco", checked: false, correct: true },
+        { id: 3, option: "Egypt", checked: false, correct: false },
+        { id: 4, option: "Saudi Arabia", checked: false, correct: false }
+    ]
+
+function HardQuiz() {
     const [isDisabled1, setIsDisabled1] = useState(false);
     const [selectedValue1, setSelectedValue1] = useState("");
     
@@ -89,14 +89,14 @@ function EasyQuiz() {
 
     return (
         <>
-            <p>What year was Valorant officially released?</p>
-            {question1Options.map((option) => (
+            <p>Which side carries and plants the Spike?</p>
+            {question1HardOptions.map((option) => (
                 <>
                     <input 
                         type="radio" 
                         key={option.id} 
                         id={option.option} 
-                        name="year-option" 
+                        name="side-option" 
                         value={option.option} 
                         checked={selectedValue1 === option.option}
                         onChange={(e) => handleChange1(e, option)}
@@ -114,22 +114,22 @@ function EasyQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ Valorant was released on <b>June 2, 2020</b>.
+                        ✅ <b>Attackers</b> are responsible for carrying and planting the Spike.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ Valorant was released on <b>June 2, 2020</b>.
+                        ❌ <b>Attackers</b> are responsible for carrying and planting the Spike.
                     </div>
                 </>
             ))}
 
-            <p>What type of shooter game is Valorant (by perspective)?</p>
-            {question2Options.map((option) => (
+            <p>Which agent says this ultimate voice line: <i><b>"No one walks away."</b></i>?</p>
+            {question2HardOptions.map((option) => (
                 <>
                     <input 
                         type="radio" 
                         key={option.id} 
                         id={option.option} 
-                        name="type-option" 
+                        name="voiceline-option" 
                         value={option.option}
                         checked={selectedValue2 === option.option}
                         onChange={(e) => handleChange2(e, option)}
@@ -147,22 +147,22 @@ function EasyQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ Valorant is a <b>first-person shooter</b> game.
+                        ✅ <b><i>Ally</i> KAY/O</b> says <i>"No one walks away."</i> when activating his ultimate.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ Valorant is a <b>first-person shooter</b> game, not a <i>{option.option.toLowerCase()}</i>.
+                        ❌ <b><i>Ally</i> KAY/O</b> says <i>"No one walks away."</i> when activating his ultimate.
                     </div>
                 </>
             ))}
 
-            <p>Which of the following agents is NOT a part of the original lineup?</p>
-            {question3Options.map((option) => (
+            <p>What type of gun is the <b>Stinger</b>?</p>
+            {question3HardOptions.map((option) => (
                 <>
                     <input 
                         type="radio" 
                         key={option.id} 
                         id={option.option} 
-                        name="agent-option" 
+                        name="gun-type-option" 
                         value={option.option}
                         checked={selectedValue3 === option.option}
                         onChange={(e) => handleChange3(e, option)}
@@ -180,16 +180,16 @@ function EasyQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ Reyna is <b>not</b> a part of the original lineup.
+                        ✅ The <b><i>Stinger</i></b> is an <b>SMG</b>.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ <i><b>{option.option}</b></i> is a part of the original lineup; <b>Reyna</b> is the correct answer.
+                        ❌ The <b><i>Stinger</i></b> is an <b>SMG</b>.
                     </div>
                 </>
             ))}
 
-            <p>What is the maximum number of players that a Valorant team can have?</p>
-            {question4Options.map((option) => (
+            <p>What is the name of Gekko's <i>lil' homie</i>?</p>
+            {question4HardOptions.map((option) => (
                 <>
                     <input 
                         type="radio" 
@@ -213,22 +213,22 @@ function EasyQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ A Valorant team can have at most <b>5</b> players.
+                        ✅ When releasing his ultimate, Gekko calls <b>Thrash</b> his <i>lil' homie</i>.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ A Valorant team can have at most <b>5</b> players.
+                        ❌ When releasing his ultimate, Gekko calls <b>Thrash</b> his <i>lil' homie</i>.
                     </div>
                 </>
             ))}
 
-            <p>Which game company created Valorant?</p>
-            {question5Options.map((option) => (
+            <p>Which country is Cypher from?</p>
+            {question5HardOptions.map((option) => (
                 <>
                     <input 
                         type="radio" 
                         key={option.id} 
                         id={option.option} 
-                        name="company-option" 
+                        name="country-option" 
                         value={option.option}
                         checked={selectedValue5 === option.option}
                         onChange={(e) => handleChange5(e, option)}
@@ -246,10 +246,10 @@ function EasyQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ <b>Riot Games</b>, whom also created <i>League of Legends</i>, released Valorant.
+                        ✅ Cypher is from <b>Rabat, Morocco</b>.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ <i><b>{option.option}</b></i> may have created some popular shooting games, but <b>Riot Games</b> is the correct answer.
+                        ❌ Cypher is from <b>Morocco</b>, not <i>{option.option}</i>.
                     </div>
                 </>
             ))}
@@ -257,4 +257,4 @@ function EasyQuiz() {
     )
 }
 
-export default EasyQuiz
+export default HardQuiz
