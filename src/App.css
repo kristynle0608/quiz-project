@@ -47,3 +47,11 @@ h1 {
 .read-the-docs {
   color: #888;
 }
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}

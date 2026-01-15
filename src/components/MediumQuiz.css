@@ -1,0 +1,17 @@
+.label-correct {
+    font-weight: 900;
+    color: darkgreen;
+}
+
+.label-incorrect {
+    font-weight: 900;
+    color: darkred;
+}
+
+.p-checked {
+    display: block;
+}
+
+.p-unchecked {
+    display: none;
+}
