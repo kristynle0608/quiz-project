@@ -9,8 +9,8 @@ const question1Options = [
     ]
 
     const question2Options = [
-        { id: 1, option: "First-person Shooter", checked: false, correct: false },
-        { id: 2, option: "Third-person Shooter", checked: false, correct: true },
+        { id: 1, option: "First-person Shooter", checked: false, correct: true },
+        { id: 2, option: "Third-person Shooter", checked: false, correct: false },
         { id: 3, option: "Top-Down/Isometric Shooter", checked: false, correct: false },
         { id: 4, option: "Rail Shooter", checked: false, correct: false }
     ]
@@ -147,10 +147,10 @@ function EasyQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ Valorant is a <b>third-person shooter</b> game.
+                        ✅ Valorant is a <b>first-person shooter</b> game.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ Valorant is a <b>third-person shooter</b> game, not a <i>{option.option.toLowerCase()}</i>.
+                        ❌ Valorant is a <b>first-person shooter</b> game, not a <i>{option.option.toLowerCase()}</i>.
                     </div>
                 </>
             ))}

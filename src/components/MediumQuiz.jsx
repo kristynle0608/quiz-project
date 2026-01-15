@@ -9,31 +9,31 @@ const question1MedOptions = [
     ]
 
     const question2MedOptions = [
-        { id: 1, option: "First-person Shooter", checked: false, correct: false },
-        { id: 2, option: "Third-person Shooter", checked: false, correct: true },
-        { id: 3, option: "Top-Down/Isometric Shooter", checked: false, correct: false },
-        { id: 4, option: "Rail Shooter", checked: false, correct: false }
+        { id: 1, option: "Harbor", checked: false, correct: false },
+        { id: 2, option: "Veto", checked: false, correct: false },
+        { id: 3, option: "KAY/O", checked: false, correct: true },
+        { id: 4, option: "Chamber", checked: false, correct: false }
     ]
 
     const question3MedOptions = [
-        { id: 1, option: "Brimstone", checked: false, correct: false },
-        { id: 2, option: "Jett", checked: false, correct: false },
-        { id: 3, option: "Sova", checked: false, correct: false },
-        { id: 4, option: "Reyna", checked: false, correct: true }
+        { id: 1, option: "SMG", checked: false, correct: true },
+        { id: 2, option: "Shotgun", checked: false, correct: false },
+        { id: 3, option: "Rifle", checked: false, correct: false },
+        { id: 4, option: "Sniper Rifle", checked: false, correct: false }
     ]
 
     const question4MedOptions = [
-        { id: 1, option: "3", checked: false, correct: false },
-        { id: 2, option: "4", checked: false, correct: false },
-        { id: 3, option: "5", checked: false, correct: true },
-        { id: 4, option: "6", checked: false, correct: false }
+        { id: 1, option: "Mosh Pit", checked: false, correct: false },
+        { id: 2, option: "Wingman", checked: false, correct: false },
+        { id: 3, option: "Dizzy", checked: false, correct: false },
+        { id: 4, option: "Thrash", checked: false, correct: true }
     ]
 
     const question5MedOptions = [
-        { id: 1, option: "Rockstar Games", checked: false, correct: false },
-        { id: 2, option: "Riot Games", checked: false, correct: true },
-        { id: 3, option: "Valve", checked: false, correct: false },
-        { id: 4, option: "Epic Games", checked: false, correct: false }
+        { id: 1, option: "Syria", checked: false, correct: false },
+        { id: 2, option: "Morocco", checked: false, correct: true },
+        { id: 3, option: "Egypt", checked: false, correct: false },
+        { id: 4, option: "Saudi Arabia", checked: false, correct: false }
     ]
 
 function MediumQuiz() {
@@ -122,14 +122,14 @@ function MediumQuiz() {
                 </>
             ))}
 
-            <p>What type of shooter game is Valorant (by perspective)?</p>
+            <p>Which agent says this ultimate voice line: <i><b>"No one walks away."</b></i>?</p>
             {question2MedOptions.map((option) => (
                 <>
                     <input 
                         type="radio" 
                         key={option.id} 
                         id={option.option} 
-                        name="type-option" 
+                        name="voiceline-option" 
                         value={option.option}
                         checked={selectedValue2 === option.option}
                         onChange={(e) => handleChange2(e, option)}
@@ -147,22 +147,22 @@ function MediumQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ Valorant is a <b>third-person shooter</b> game.
+                        ✅ <b><i>Ally</i> KAY/O</b> says <i>"No one walks away."</i> when activating his ultimate.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ Valorant is a <b>third-person shooter</b> game, not a <i>{option.option.toLowerCase()}</i>.
+                        ❌ <b><i>Ally</i> KAY/O</b> says <i>"No one walks away."</i> when activating his ultimate.
                     </div>
                 </>
             ))}
 
-            <p>Which of the following agents is NOT a part of the original lineup?</p>
+            <p>What type of gun is the <b>Stinger</b>?</p>
             {question3MedOptions.map((option) => (
                 <>
                     <input 
                         type="radio" 
                         key={option.id} 
                         id={option.option} 
-                        name="agent-option" 
+                        name="gun-type-option" 
                         value={option.option}
                         checked={selectedValue3 === option.option}
                         onChange={(e) => handleChange3(e, option)}
@@ -180,15 +180,15 @@ function MediumQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ Reyna is <b>not</b> a part of the original lineup.
+                        ✅ The <b><i>Stinger</i></b> is an <b>SMG</b>.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ <i><b>{option.option}</b></i> is a part of the original lineup; <b>Reyna</b> is the correct answer.
+                        ❌ The <b><i>Stinger</i></b> is an <b>SMG</b>.
                     </div>
                 </>
             ))}
 
-            <p>What is the maximum number of players that a Valorant team can have?</p>
+            <p>What is the name of Gekko's <i>lil' homie</i>?</p>
             {question4MedOptions.map((option) => (
                 <>
                     <input 
@@ -213,22 +213,22 @@ function MediumQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ A Valorant team can have at most <b>5</b> players.
+                        ✅ When releasing his ultimate, Gekko calls <b>Thrash</b> his <i>lil' homie</i>.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ A Valorant team can have at most <b>5</b> players.
+                        ❌ When releasing his ultimate, Gekko calls <b>Thrash</b> his <i>lil' homie</i>.
                     </div>
                 </>
             ))}
 
-            <p>Which game company created Valorant?</p>
+            <p>Which country is Cypher from?</p>
             {question5MedOptions.map((option) => (
                 <>
                     <input 
                         type="radio" 
                         key={option.id} 
                         id={option.option} 
-                        name="company-option" 
+                        name="country-option" 
                         value={option.option}
                         checked={selectedValue5 === option.option}
                         onChange={(e) => handleChange5(e, option)}
@@ -246,10 +246,10 @@ function MediumQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ <b>Riot Games</b>, whom also created <i>League of Legends</i>, released Valorant.
+                        ✅ Cypher is from <b>Rabat, Morocco</b>.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ <i><b>{option.option}</b></i> may have created some popular shooting games, but <b>Riot Games</b> is the correct answer.
+                        ❌ Cypher is from <b>Morocco</b>, not <i>{option.option}</i>.
                     </div>
                 </>
             ))}
