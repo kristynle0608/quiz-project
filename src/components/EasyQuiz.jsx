@@ -89,7 +89,7 @@ function EasyQuiz() {
 
     return (
         <>
-            <p>What year was Valorant officially released?</p>
+            <p>What <b>year</b> was Valorant <b>officially</b> released?</p>
             {question1Options.map((option) => (
                 <>
                     <input 
@@ -155,7 +155,7 @@ function EasyQuiz() {
                 </>
             ))}
 
-            <p>Which of the following agents is NOT a part of the original lineup?</p>
+            <p>Which of the following agents is <b>NOT</b> a part of the original lineup?</p>
             {question3Options.map((option) => (
                 <>
                     <input 
@@ -188,7 +188,7 @@ function EasyQuiz() {
                 </>
             ))}
 
-            <p>What is the maximum number of players that a Valorant team can have?</p>
+            <p>What is the <b>maximum</b> number of players that a Valorant team can have?</p>
             {question4Options.map((option) => (
                 <>
                     <input 

@@ -1,25 +1,26 @@
 import { useState } from 'react'
 import './HardQuiz.css'
+import bear from '../assets/stuffed-bear-valorant.webp'
 
 const question1HardOptions = [
-        { id: 1, option: "Attackers", checked: false, correct: true },
-        { id: 2, option: "Defenders", checked: false, correct: false },
-        { id: 3, option: "Strikers", checked: false, correct: false },
-        { id: 4, option: "Protectors", checked: false, correct: false }
+        { id: 1, option: "Albuquerque, New Mexico, USA, Alpha Earth", checked: false, correct: false },
+        { id: 2, option: "Santa Fe County, New Mexico, USA, Alpha Earth", checked: false, correct: true },
+        { id: 3, option: "Silver City, New Mexico, USA, Omega Earth", checked: false, correct: false },
+        { id: 4, option: "Albuquerque, New Mexico, USA, Omega Earth", checked: false, correct: false }
     ]
 
     const question2HardOptions = [
-        { id: 1, option: "Harbor", checked: false, correct: false },
-        { id: 2, option: "Veto", checked: false, correct: false },
-        { id: 3, option: "KAY/O", checked: false, correct: true },
-        { id: 4, option: "Chamber", checked: false, correct: false }
+        { id: 1, option: "Mary Adeyemi", checked: false, correct: true },
+        { id: 2, option: "Tomi Adeyemi", checked: false, correct: false },
+        { id: 3, option: "Flora Nwapa", checked: false, correct: false },
+        { id: 4, option: "Zulu Sofola", checked: false, correct: false }
     ]
 
     const question3HardOptions = [
-        { id: 1, option: "SMG", checked: false, correct: true },
-        { id: 2, option: "Shotgun", checked: false, correct: false },
-        { id: 3, option: "Rifle", checked: false, correct: false },
-        { id: 4, option: "Sniper Rifle", checked: false, correct: false }
+        { id: 1, option: "Abyss", checked: false, correct: false },
+        { id: 2, option: "Breeze", checked: false, correct: false },
+        { id: 3, option: "Ice Box", checked: false, correct: true },
+        { id: 4, option: "Fracture", checked: false, correct: false }
     ]
 
     const question4HardOptions = [
@@ -89,14 +90,14 @@ function HardQuiz() {
 
     return (
         <>
-            <p>Which side carries and plants the Spike?</p>
+            <p>Where is <b>Fracture</b> located?</p>
             {question1HardOptions.map((option) => (
                 <>
                     <input 
                         type="radio" 
                         key={option.id} 
                         id={option.option} 
-                        name="side-option" 
+                        name="location-option" 
                         value={option.option} 
                         checked={selectedValue1 === option.option}
                         onChange={(e) => handleChange1(e, option)}
@@ -114,15 +115,15 @@ function HardQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ <b>Attackers</b> are responsible for carrying and planting the Spike.
+                        ✅ Map <b><i>Fracture</i></b> is located in <b>Santa Fe County, New Mexico, USA, Alpha Earth</b>.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ <b>Attackers</b> are responsible for carrying and planting the Spike.
+                        ❌ Map <b><i>Fracture</i></b> is located in <b>Santa Fe County, New Mexico, USA, Alpha Earth</b>.
                     </div>
                 </>
             ))}
 
-            <p>Which agent says this ultimate voice line: <i><b>"No one walks away."</b></i>?</p>
+            <p>What is the name of <b>Phoenix</b>'s younger sister?</p>
             {question2HardOptions.map((option) => (
                 <>
                     <input 
@@ -147,15 +148,16 @@ function HardQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ <b><i>Ally</i> KAY/O</b> says <i>"No one walks away."</i> when activating his ultimate.
+                        ✅ <b>Mary Adeyemi</b> is <i>Phoenix's</i> younger sister.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ <b><i>Ally</i> KAY/O</b> says <i>"No one walks away."</i> when activating his ultimate.
+                        ❌ <b>Mary Adeyemi</b> is <i>Phoenix's</i> younger sister.
                     </div>
                 </>
             ))}
 
-            <p>What type of gun is the <b>Stinger</b>?</p>
+            <p>Which <b>map</b> are these stuffed animals located?</p>
+            <img src={bear}></img><br></br>
             {question3HardOptions.map((option) => (
                 <>
                     <input 
@@ -180,10 +182,10 @@ function HardQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ The <b><i>Stinger</i></b> is an <b>SMG</b>.
+                        ✅ These ones are located on <b>Ice Box</b>.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ The <b><i>Stinger</i></b> is an <b>SMG</b>.
+                        ❌ These ones are located on <b>Ice Box</b>.
                     </div>
                 </>
             ))}

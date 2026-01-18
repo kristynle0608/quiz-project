@@ -89,7 +89,7 @@ function MediumQuiz() {
 
     return (
         <>
-            <p>Which side carries and plants the Spike?</p>
+            <p>Which <b>side</b> carries and plants the Spike?</p>
             {question1MedOptions.map((option) => (
                 <>
                     <input 
@@ -221,7 +221,7 @@ function MediumQuiz() {
                 </>
             ))}
 
-            <p>Which country is Cypher from?</p>
+            <p>Which <b>country</b> is <b>Cypher</b> from?</p>
             {question5MedOptions.map((option) => (
                 <>
                     <input 
