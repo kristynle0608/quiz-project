@@ -24,17 +24,17 @@ const question1HardOptions = [
     ]
 
     const question4HardOptions = [
-        { id: 1, option: "Mosh Pit", checked: false, correct: false },
-        { id: 2, option: "Wingman", checked: false, correct: false },
-        { id: 3, option: "Dizzy", checked: false, correct: false },
-        { id: 4, option: "Thrash", checked: false, correct: true }
+        { id: 1, option: "Ascent", checked: false, correct: true },
+        { id: 2, option: "Bind", checked: false, correct: false },
+        { id: 3, option: "Haven", checked: false, correct: false },
+        { id: 4, option: "Split", checked: false, correct: false }
     ]
 
     const question5HardOptions = [
-        { id: 1, option: "Syria", checked: false, correct: false },
-        { id: 2, option: "Morocco", checked: false, correct: true },
-        { id: 3, option: "Egypt", checked: false, correct: false },
-        { id: 4, option: "Saudi Arabia", checked: false, correct: false }
+        { id: 1, option: "Seahorse, Turtle", checked: false, correct: false },
+        { id: 2, option: "Clam, Fish", checked: false, correct: true },
+        { id: 3, option: "Crayfish, Lobster", checked: false, correct: false },
+        { id: 4, option: "Shrimp, Crab", checked: false, correct: true }
     ]
 
 function HardQuiz() {
@@ -190,7 +190,7 @@ function HardQuiz() {
                 </>
             ))}
 
-            <p>What is the name of Gekko's <i>lil' homie</i>?</p>
+            <p>Which map was <b>NOT</b> released during <i>Beta</i>?</p>
             {question4HardOptions.map((option) => (
                 <>
                     <input 
@@ -215,15 +215,15 @@ function HardQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ When releasing his ultimate, Gekko calls <b>Thrash</b> his <i>lil' homie</i>.
+                        ✅ <b>Ascent</b> was released in the <i>official launch</i> of Valorant.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ When releasing his ultimate, Gekko calls <b>Thrash</b> his <i>lil' homie</i>.
+                        ❌ <b>Ascent</b> was released in the <i>official launch</i> of Valorant.
                     </div>
                 </>
             ))}
 
-            <p>Which country is Cypher from?</p>
+            <p>Which <b>sea animals</b> are on the sides of <i>Breeze</i>'s pyraminds?</p>
             {question5HardOptions.map((option) => (
                 <>
                     <input 
@@ -248,10 +248,10 @@ function HardQuiz() {
                     </label><br></br>
 
                     <div className={option.checked && option.correct ? "p-checked" : "p-unchecked"}>
-                        ✅ Cypher is from <b>Rabat, Morocco</b>.
+                        ✅ A <b>shrimp</b> and <b>crab</b> are seen on the sides of <i>Breeze</i>'s pyraminds.
                     </div>
                     <div className={option.checked && option.correct === false ? "p-checked" : "p-unchecked"}>
-                        ❌ Cypher is from <b>Morocco</b>, not <i>{option.option}</i>.
+                        ❌ A <b>shrimp</b> and <b>crab</b> are seen on the sides of <i>Breeze</i>'s pyraminds.
                     </div>
                 </>
             ))}
