@@ -157,7 +157,7 @@ function HardQuiz() {
             ))}
 
             <p>Which <b>map</b> are these stuffed animals located?</p>
-            <img src={bear}></img><br></br>
+            <img id="bear" src={bear}></img><br></br>
             {question3HardOptions.map((option) => (
                 <>
                     <input 

@@ -42,8 +42,15 @@ input[type="radio"] {
 .p-checked {
     display: block;
     margin-bottom: 5px;
+    margin-left: 1.5em;
 }
 
 .p-unchecked {
     display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  label:hover {
+    color: #4c4c4c;
+  }
 }

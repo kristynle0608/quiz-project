@@ -3,15 +3,54 @@
     color: darkgreen;
 }
 
+.label-correct:hover {
+    font-weight: 900;
+    color: darkgreen;
+    cursor: default;
+}
+
 .label-incorrect {
     font-weight: 900;
     color: darkred;
 }
 
+.label-incorrect:hover {
+    font-weight: 900;
+    color: darkred;
+    cursor: default;
+}
+
+label {
+    font-size: large;
+}
+
+label:hover {
+    cursor: pointer;
+    color:rgb(163, 163, 163);
+    transition-delay: 1s ease-out;
+}
+
+p {
+    font-size: larger;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+  width: 60px
+}
+
 .p-checked {
     display: block;
+    margin-bottom: 5px;
+    margin-left: 1.5em;
 }
 
 .p-unchecked {
     display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  label:hover {
+    color: #4c4c4c;
+  }
 }
