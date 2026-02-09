@@ -175,6 +175,7 @@ function MediumQuiz() {
                             option.checked && option.correct ? "label-correct" 
                             : option.checked && option.correct === false ? "label-incorrect" : ""
                         }
+                        class="gap-x-5"
                     >
                         {option.option}
                     </label><br></br>

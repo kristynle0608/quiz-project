@@ -9,32 +9,32 @@ const question1Options = [
 ]
 
 const question2Options = [
-        { id: 1, option: "First-person Shooter", checked: false, correct: true },
-        { id: 2, option: "Third-person Shooter", checked: false, correct: false },
-        { id: 3, option: "Top-Down/Isometric Shooter", checked: false, correct: false },
-        { id: 4, option: "Rail Shooter", checked: false, correct: false }
-    ]
+    { id: 1, option: "First-person Shooter", checked: false, correct: true },
+    { id: 2, option: "Third-person Shooter", checked: false, correct: false },
+    { id: 3, option: "Top-Down/Isometric Shooter", checked: false, correct: false },
+    { id: 4, option: "Rail Shooter", checked: false, correct: false }
+]
 
-    const question3Options = [
-        { id: 1, option: "Brimstone", checked: false, correct: false },
-        { id: 2, option: "Jett", checked: false, correct: false },
-        { id: 3, option: "Sova", checked: false, correct: false },
-        { id: 4, option: "Reyna", checked: false, correct: true }
-    ]
+const question3Options = [
+    { id: 1, option: "Brimstone", checked: false, correct: false },
+    { id: 2, option: "Jett", checked: false, correct: false },
+    { id: 3, option: "Sova", checked: false, correct: false },
+    { id: 4, option: "Reyna", checked: false, correct: true }
+]
 
-    const question4Options = [
-        { id: 1, option: "3", checked: false, correct: false },
-        { id: 2, option: "4", checked: false, correct: false },
-        { id: 3, option: "5", checked: false, correct: true },
-        { id: 4, option: "6", checked: false, correct: false }
-    ]
+const question4Options = [
+    { id: 1, option: "3", checked: false, correct: false },
+    { id: 2, option: "4", checked: false, correct: false },
+    { id: 3, option: "5", checked: false, correct: true },
+    { id: 4, option: "6", checked: false, correct: false }
+]
 
-    const question5Options = [
-        { id: 1, option: "Rockstar Games", checked: false, correct: false },
-        { id: 2, option: "Riot Games", checked: false, correct: true },
-        { id: 3, option: "Valve", checked: false, correct: false },
-        { id: 4, option: "Epic Games", checked: false, correct: false }
-    ]
+const question5Options = [
+    { id: 1, option: "Rockstar Games", checked: false, correct: false },
+    { id: 2, option: "Riot Games", checked: false, correct: true },
+    { id: 3, option: "Valve", checked: false, correct: false },
+    { id: 4, option: "Epic Games", checked: false, correct: false }
+]
 
 function EasyQuiz() {
     const [isDisabled1, setIsDisabled1] = useState(false);
@@ -122,7 +122,7 @@ function EasyQuiz() {
                 </>
             ))}
 
-            <p>What type of shooter game is Valorant (by perspective)?</p>
+            <p>What <b>type</b> of shooter game is Valorant <i>(by perspective)</i>?</p>
             {question2Options.map((option) => (
                 <>
                     <input 
@@ -155,7 +155,7 @@ function EasyQuiz() {
                 </>
             ))}
 
-            <p>Which of the following agents is <b>NOT</b> a part of the original lineup?</p>
+            <p>Which of the following <i><b>agents</b></i> is <b>NOT</b> a part of the original lineup?</p>
             {question3Options.map((option) => (
                 <>
                     <input 
@@ -188,7 +188,7 @@ function EasyQuiz() {
                 </>
             ))}
 
-            <p>What is the <b>maximum</b> number of players that a Valorant team can have?</p>
+            <p>What is the <b>maximum</b> number of <b><i>players</i></b> that a Valorant team can have?</p>
             {question4Options.map((option) => (
                 <>
                     <input 
@@ -221,7 +221,7 @@ function EasyQuiz() {
                 </>
             ))}
 
-            <p>Which game company created Valorant?</p>
+            <p>Which <b>game company</b> created Valorant?</p>
             {question5Options.map((option) => (
                 <>
                     <input 

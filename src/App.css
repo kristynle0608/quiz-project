@@ -4,12 +4,21 @@
   padding: 2rem;
 }
 
+#valorant {
+  width: 75%;
+  border-radius: 20px;
+  display: flex;
+  margin: 0 auto
+}
+
 h1 {
   margin: 0 auto;
   display: grid;
   max-width: 1280px;
   text-align: center;
   place-items: center;
+  margin-top: 60px;
+  margin-bottom: 30px
 }
 
 .logo {
@@ -42,6 +51,12 @@ h1 {
 
 .card {
   padding: 2em;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .read-the-docs {
